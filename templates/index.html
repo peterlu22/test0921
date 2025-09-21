@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT 智慧家庭控制</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IoT 智慧家庭控制中心</h1>
+        </header>
+
+        <section class="dashboard">
+            <div class="card">
+                <h2>室內溫度</h2>
+                <p>目前溫度</p>
+                <div id="temperature" class="value">25.0°C</div>
+            </div>
+            <div class="card">
+                <h2>室內濕度</h2>
+                <p>目前濕度</p>
+                <div id="humidity" class="value">60%</div>
+            </div>
+            <div class="card">
+                <h2>客廳燈</h2>
+                <p>狀態</p>
+                <div id="light-status" class="value">關閉</div>
+                <div class="device-control">
+                    <button id="light-toggle-btn" class="off">開啟</button>
+                </div>
+            </div>
+            <div class="card">
+                <h2>風扇</h2>
+                <p>狀態</p>
+                <div id="fan-status" class="value">關閉</div>
+                <div class="device-control">
+                    <button id="fan-toggle-btn" class="off">開啟</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 IoT 智慧家庭. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
